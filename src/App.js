@@ -16,6 +16,9 @@ class App extends Component {
     this.handleChangeTab = this.handleChangeTab.bind(this);
   }
 
+  /* La fonction handleChangeTab est gérée par App mais sera envoyée à TabSelector via les props.
+  Cela permet aux divers buttons de Tabselector de modifier directement le state d'App. */
+  
   handleChangeTab(event) {
     const buttonId = event.target.id;
     this.setState({ activeId: buttonId });
